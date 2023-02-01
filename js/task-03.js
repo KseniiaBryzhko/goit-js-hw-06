@@ -12,3 +12,26 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+// додавання через append
+// const makeImage = ({ url, alt }) => {
+//   const oneItem = document.createElement('li');
+//   const oneImage = document.createElement('img');
+//   oneImage.setAttribute('src', url);
+//   oneImage.setAttribute('alt', alt);
+//   oneItem.append(oneImage);
+//   return oneItem;
+// };
+
+// const createdImages = images.map(makeImage);
+// const listOfImages = document.querySelector('.gallery');
+// listOfImages.append(...createdImages);
+
+// додавання через insertAdjacentHTML
+const listOfImages = document.querySelector('.gallery');
+images.forEach(image => {
+  listOfImages.insertAdjacentHTML(
+    'afterbegin',
+    `<li class = "third-task-item"><img class = "third-task-image" src = "${image.url}" alt = "${image.alt}" /></li>`
+  );
+});
