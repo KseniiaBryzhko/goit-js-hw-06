@@ -34,6 +34,10 @@ button {
   width: calc((100% - 20px) / 2);
 }
 
+.third-task-item:first-child {
+  order: 2;
+}
+
 .third-task-image {
   display: block;
   width: 100%;
